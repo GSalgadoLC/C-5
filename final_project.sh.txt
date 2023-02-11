@@ -1,0 +1,100 @@
+#!/bin/bash
+set -o history
+echo " Hello , Welcome to my final project"
+echo " ----------------------------------------------------------------"
+echo "Print working directory, make directory, change into directory"
+sleep 2
+pwd
+mkdir final_directory
+cd /home/user/final_directory
+echo " ---------------------------------------------------------------"
+echo "Creating a file"
+sleep 3
+touch final_file1
+echo " ---------------------------------------------------------------"
+echo "Finding out linux kernel  information append into file, display file"
+sleep 3
+uname -r >> final_file1
+cat final_file1
+echo "-----------------------------------------------------------------"
+echo "Updating, Installing, and opening virtual box"
+sleep 4
+sudo apt-get update
+sudo apt-get install virtualbox
+virtualbox
+echo "-----------------------------------------------------------------"
+echo "Creating new users with home directory "
+sleep 4
+sudo useradd -m Mario
+sudo useradd -m Bowser
+sudo useradd -m Thanos
+echo " ---------------------------------------------------------------"
+echo "Displaying and verifying user was added"
+sleep 4
+cat /etc/passwd
+sleep 2
+echo " ---------------------------------------------------------------"
+echo "Verifying users have a home directory"
+ls -l /home
+sleep 4
+echo " ---------------------------------------------------------------"
+echo "Deleting a user and their home directory"
+sudo userdel -r Mario
+sleep 4
+echo " ---------------------------------------------------------------"
+echo "Verifying user no longer exist"
+cat /etc/passwd
+sleep 4
+echo " ---------------------------------------------------------------"
+echo "Verifying user home directory is deleted"
+ls -l /home
+sleep 2
+echo "----------------------------------------------------------------"
+echo "Setting a new password for user"
+sudo passwd Bowser
+sleep 2
+echo "-----------------------------------------------------------------"
+echo "Creating a group"
+sudo groupadd nintendo_group
+sudo groupadd avengers_group
+sleep 2
+echo " ----------------------------------------------------------------"
+echo "Displaying groups"
+cat /etc/group
+sleep 2
+echo "------------------------------------------------------------------"
+echo "Adding users to groups"
+sudo usermod -a -G nintendo_group Bowser
+sudo usermod -a -G avengers_group Thanos
+groups Bowser
+groups Thanos
+sleep 2
+echo "------------------------------------------------------------------"
+echo "Deleting a group"
+sudo groupdel avengers_group
+groups Bowser
+groups Thanos
+sleep 2
+echo "-----------------------------------------------------------------"
+echo "Listing partitions"
+sudo parted -l
+sleep 2
+echo "------------------------------------------------------------------"
+echo "Listing running processes"
+ps
+sleep 2
+echo "----------------------------------------------------------------"
+echo "Dispalying current time, number of users, running session"
+uptime
+sleep 2
+echo "----------------------------------------------------------------"
+echo "Finding files"
+whereis virtualbox
+whereis nano
+sleep 1
+echo "----------------------------------------------------------------"
+echo "Command history"
+history
+
+echo "Thanks for running my final project"
+
