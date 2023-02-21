@@ -1,0 +1,1291 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE>Programming Concepts and Methodology I: C++</TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice 4.1.6  (Win32)">
+	<META NAME="AUTHOR" CONTENT="Dr. Mark E. Lehr">
+	<META NAME="CREATED" CONTENT="20130805;15130000">
+	<META NAME="CHANGEDBY" CONTENT="Mark Lehr">
+	<META NAME="CHANGED" CONTENT="20230102;9300950">
+	<META NAME="AppVersion" CONTENT="12.0000">
+	<META NAME="Company" CONTENT="Valencia Family">
+	<META NAME="DocSecurity" CONTENT="0">
+	<META NAME="HyperlinksChanged" CONTENT="false">
+	<META NAME="LinksUpToDate" CONTENT="false">
+	<META NAME="Originator" CONTENT="Microsoft Word 15">
+	<META NAME="ProgId" CONTENT="Word.Document">
+	<META NAME="ScaleCrop" CONTENT="false">
+	<META NAME="ShareDoc" CONTENT="false">
+	<META NAME="CHANGEDBY" CONTENT="Mark Lehr">
+	<META NAME="CHANGEDBY" CONTENT="Mark Lehr">
+	<META NAME="CHANGEDBY" CONTENT="Mark Lehr">
+	<META NAME="CHANGEDBY" CONTENT="Mark Lehr">
+	<META NAME="CHANGEDBY" CONTENT="Mark Lehr">
+	<META NAME="CHANGEDBY" CONTENT="Mark Lehr">
+	<META NAME="CHANGEDBY" CONTENT="Mark Lehr">
+	<META NAME="CHANGEDBY" CONTENT="Mark Lehr">
+	<META NAME="CHANGEDBY" CONTENT="RCC RCCD">
+	<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+	<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>rcc</o:Author>
+  <o:LastAuthor>Administrator</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>2</o:TotalTime>
+  <o:Created>2018-09-02T20:47:00Z</o:Created>
+  <o:LastSaved>2018-09-02T20:47:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>1792</o:Words>
+  <o:Characters>10221</o:Characters>
+  <o:Lines>85</o:Lines>
+  <o:Paragraphs>23</o:Paragraphs>
+  <o:CharactersWithSpaces>11990</o:CharactersWithSpaces>
+  <o:Version>15.00</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]-->
+	<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:TrackMoves>false</w:TrackMoves>
+  <w:TrackFormatting/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SplitPgBreakAndParaMark/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="&#45;-"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]-->
+	<!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="false"
+  DefSemiHidden="false" DefQFormat="false" DefPriority="99"
+  LatentStyleCount="371">
+  <w:LsdException Locked="false" Priority="0" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 7"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 8"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 9"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 1"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 2"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 3"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 4"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 5"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 6"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 7"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 8"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 9"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Normal Indent"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="footnote text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="annotation text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="header"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="footer"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index heading"/>
+  <w:LsdException Locked="false" Priority="35" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="table of figures"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="envelope address"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="envelope return"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="footnote reference"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="annotation reference"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="line number"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="page number"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="endnote reference"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="endnote text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="table of authorities"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="macro"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="toa heading"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 5"/>
+  <w:LsdException Locked="false" Priority="10" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Closing"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Signature"/>
+  <w:LsdException Locked="false" Priority="1" SemiHidden="true"
+   UnhideWhenUsed="true" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text Indent"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Message Header"/>
+  <w:LsdException Locked="false" Priority="11" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Salutation"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Date"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text First Indent"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text First Indent 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Note Heading"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text Indent 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text Indent 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Block Text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Hyperlink"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="FollowedHyperlink"/>
+  <w:LsdException Locked="false" Priority="22" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" Priority="20" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Document Map"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Plain Text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="E-mail Signature"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Top of Form"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Bottom of Form"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Normal (Web)"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Acronym"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Address"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Cite"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Code"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Definition"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Keyboard"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Preformatted"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Sample"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Typewriter"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Variable"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Normal Table"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="annotation subject"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="No List"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Outline List 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Outline List 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Outline List 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Simple 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Simple 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Simple 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Colorful 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Colorful 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Colorful 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 7"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 8"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 7"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 8"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table 3D effects 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table 3D effects 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table 3D effects 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Contemporary"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Elegant"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Professional"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Subtle 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Subtle 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Web 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Web 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Web 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Balloon Text"/>
+  <w:LsdException Locked="false" Priority="39" Name="Table Grid"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Theme"/>
+  <w:LsdException Locked="false" SemiHidden="true" Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="1" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" QFormat="true"
+   Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" QFormat="true"
+   Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" QFormat="true"
+   Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" QFormat="true"
+   Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" QFormat="true"
+   Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" QFormat="true"
+   Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" SemiHidden="true"
+   UnhideWhenUsed="true" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="TOC Heading"/>
+  <w:LsdException Locked="false" Priority="41" Name="Plain Table 1"/>
+  <w:LsdException Locked="false" Priority="42" Name="Plain Table 2"/>
+  <w:LsdException Locked="false" Priority="43" Name="Plain Table 3"/>
+  <w:LsdException Locked="false" Priority="44" Name="Plain Table 4"/>
+  <w:LsdException Locked="false" Priority="45" Name="Plain Table 5"/>
+  <w:LsdException Locked="false" Priority="40" Name="Grid Table Light"/>
+  <w:LsdException Locked="false" Priority="46" Name="Grid Table 1 Light"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark"/>
+  <w:LsdException Locked="false" Priority="51" Name="Grid Table 6 Colorful"/>
+  <w:LsdException Locked="false" Priority="52" Name="Grid Table 7 Colorful"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 1"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 1"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 1"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 2"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 2"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 2"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 3"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 3"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 3"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 4"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 4"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 5"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 5"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 5"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 6"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 6"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 6"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 6"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 6"/>
+  <w:LsdException Locked="false" Priority="46" Name="List Table 1 Light"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark"/>
+  <w:LsdException Locked="false" Priority="51" Name="List Table 6 Colorful"/>
+  <w:LsdException Locked="false" Priority="52" Name="List Table 7 Colorful"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 1"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 1"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 1"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 2"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 2"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 2"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 3"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 3"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 3"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 4"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 4"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 5"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 5"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 5"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 6"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 6"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 6"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 6"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 6"/>
+ </w:LatentStyles>
+</xml><![endif]-->
+	<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman",serif;}
+</style>
+<![endif]-->
+	<META NAME="CHANGEDBY" CONTENT="Dr. Mark E. Lehr">
+	<META NAME="CHANGEDBY" CONTENT="Dr. Mark E. Lehr">
+	<!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="1027"/>
+</xml><![endif]-->
+	<!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+	<STYLE TYPE="text/css">
+	<!--
+		P { color: #000000; widows: 2; orphans: 2 }
+		TD P { color: #000000; widows: 2; orphans: 2 }
+		A:link { color: #0000ff; so-language: zxx }
+		A:visited { color: #800080 }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" TEXT="#000000" LINK="#0000ff" VLINK="#800080" DIR="LTR">
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><FONT SIZE=3 STYLE="font-size: 13pt"><B>Riverside
+City College</B></FONT></P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><FONT SIZE=3 STYLE="font-size: 13pt"><B>CSC/CIS
+5 - Programming Concepts and Methodology I: C++</B></FONT></P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in">&nbsp;</P>
+<P STYLE="margin-bottom: 0in"><B>Synopsis &rarr;</B> We will cover
+chapters 1 to 8 as core concepts. 10 problems/Chapter at a pace of
+roughly 1.5 Chapters/week. Chapters 9, 11 and 13 will also be
+discussed and examples/problems assigned.</P>
+<P STYLE="margin-bottom: 0in">Homework / Midterm / Project1 / Final /
+Project2 each count for 20% of the grade. &frac12; content of course.</P>
+<P STYLE="margin-bottom: 0in">Labs make up the other course content
+without which you will not be able to do the above assignments.</P>
+<P STYLE="margin-bottom: 0in">&nbsp;</P>
+<P STYLE="margin-bottom: 0in"><B>Instructor:</B> <A HREF="https://app.maven.co/profile/xss7eEWk">Dr.
+Mark E. Lehr</A></P>
+<P STYLE="margin-bottom: 0in"><B>E-Mail:</B> mark.lehr@rcc.edu</P>
+<P STYLE="margin-bottom: 0in"><STRONG>Online Hours/Lecture:
+Mon/Tues/Wed/Thurs 9:35 to 11:35am Lab 12:00 to 3:00pm</STRONG></P>
+<P STYLE="margin-bottom: 0in"><STRONG>Zoom Link: </STRONG><STRONG><A HREF="https://rccd-edu.zoom.us/j/4372081701?pwd=RGsxeFpmY3d2UklzM0Jabm5XVVR4UT09"><SPAN STYLE="font-weight: normal">hyper_link</SPAN></A></STRONG></P>
+<P STYLE="margin-bottom: 0in"><STRONG>Office Hours: </STRONG><STRONG><SPAN STYLE="font-weight: normal">Right
+before and after the zoom lectures each day.</SPAN></STRONG></P>
+<P STYLE="margin-bottom: 0in"><B>Outline:</B> <A HREF="http://209.129.8.7/~MarkLehrSyllabi/csc5Syllabus/CSC_5_Outline.pdf">hyper_link</A></P>
+<P STYLE="margin-bottom: 0in"><U><B>Required Text</B></U><FONT SIZE=2 STYLE="font-size: 11pt"><U><B>,
+either not both unless you are really into programming and in that
+case you should also get the Deitel book on C++ as well.</B></U></FONT></P>
+<P STYLE="margin-top: 0.07in; margin-bottom: 0in">&nbsp;</P>
+<P><IMG SRC="CSC5_Syllabus_files/image002.jpg" NAME="graphics1" ALIGN=LEFT HSPACE=12 WIDTH=342 HEIGHT=384 BORDER=0><BR CLEAR=LEFT><FONT COLOR="#333333"><!--[if gte vml 1]><v:shapetype id="_x0000_t75"
+ coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe"
+ filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="Picture_x0020_3" o:spid="_x0000_s1026" type="#_x0000_t75"
+ style='position:absolute;margin-left:0;margin-top:0;width:168.75pt;height:210.95pt;
+ z-index:251658240;visibility:visible;mso-wrap-style:square;
+ mso-width-percent:0;mso-height-percent:0;mso-wrap-distance-left:9pt;
+ mso-wrap-distance-top:0;mso-wrap-distance-right:9pt;
+ mso-wrap-distance-bottom:0;mso-position-horizontal:left;
+ mso-position-horizontal-relative:text;mso-position-vertical:top;
+ mso-position-vertical-relative:text;mso-width-percent:0;mso-height-percent:0;
+ mso-width-relative:page;mso-height-relative:page'>
+ <v:imagedata src="CSC5_Syllabus_files/image001.jpg" o:title=""/>
+ <w:wrap type="square"/>
+</v:shape><![endif]--><FONT FACE="Symbol"><FONT SIZE=2>&middot;</FONT></FONT></FONT><FONT COLOR="#333333">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</FONT><FONT COLOR="#333333"><FONT FACE="Verdana, sans-serif"><FONT SIZE=2><B>Paperback:</B></FONT></FONT></FONT><FONT COLOR="#333333">&nbsp;</FONT><FONT COLOR="#333333"><FONT FACE="Arial, sans-serif"><FONT SIZE=2>1344
+pages</FONT></FONT></FONT></P>
+<P><FONT COLOR="#333333"><FONT FACE="Symbol"><FONT SIZE=2>&middot;</FONT></FONT></FONT><FONT COLOR="#333333">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</FONT><FONT COLOR="#333333"><FONT FACE="Verdana, sans-serif"><FONT SIZE=2><B>Publisher:</B></FONT></FONT></FONT><FONT COLOR="#333333">&nbsp;</FONT><FONT COLOR="#333333"><FONT FACE="Arial, sans-serif"><FONT SIZE=2>Pearson;
+9 edition (February 23, 2017)</FONT></FONT></FONT></P>
+<P><FONT COLOR="#333333"><FONT FACE="Symbol"><FONT SIZE=2>&middot;</FONT></FONT></FONT><FONT COLOR="#333333">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</FONT><FONT COLOR="#333333"><FONT FACE="Verdana, sans-serif"><FONT SIZE=2><B>Language:</B></FONT></FONT></FONT><FONT COLOR="#333333">&nbsp;</FONT><FONT COLOR="#333333"><FONT FACE="Arial, sans-serif"><FONT SIZE=2>English</FONT></FONT></FONT></P>
+<P><FONT COLOR="#333333"><FONT FACE="Symbol"><FONT SIZE=2>&middot;</FONT></FONT></FONT><FONT COLOR="#333333">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</FONT><FONT COLOR="#333333"><FONT FACE="Verdana, sans-serif"><FONT SIZE=2><B>ISBN-10:</B></FONT></FONT></FONT><FONT COLOR="#333333">&nbsp;</FONT><FONT COLOR="#333333"><FONT FACE="Arial, sans-serif"><FONT SIZE=2>0134498372</FONT></FONT></FONT></P>
+<P><FONT COLOR="#333333"><FONT FACE="Symbol"><FONT SIZE=2>&middot;</FONT></FONT></FONT><FONT COLOR="#333333">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</FONT><FONT COLOR="#333333"><FONT FACE="Verdana, sans-serif"><FONT SIZE=2><B>ISBN-13:</B></FONT></FONT></FONT><FONT COLOR="#333333">&nbsp;</FONT><FONT COLOR="#333333"><FONT FACE="Arial, sans-serif"><FONT SIZE=2>978-0134498379</FONT></FONT></FONT></P>
+<P><A NAME="main-image1"></A><!--[if gte vml 1]><v:shape
+ id="Picture_x0020_4" o:spid="_x0000_i1025" type="#_x0000_t75" style='width:177pt;
+ height:219pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="CSC5_Syllabus_files/image003.jpg" o:title=""/>
+</v:shape><![endif]--><IMG SRC="CSC5_Syllabus_files/image004.jpg" NAME="graphics2" ALIGN=BOTTOM WIDTH=236 HEIGHT=292 BORDER=0></P>
+<P><FONT COLOR="#333333"><FONT FACE="Symbol"><FONT SIZE=2>&middot;</FONT></FONT></FONT><FONT COLOR="#333333">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</FONT><FONT COLOR="#333333"><FONT FACE="Verdana, sans-serif"><FONT SIZE=2><B>Paperback:</B></FONT></FONT></FONT><FONT COLOR="#333333">&nbsp;</FONT><FONT COLOR="#333333"><FONT FACE="Arial, sans-serif"><FONT SIZE=2>1120
+pages</FONT></FONT></FONT></P>
+<P><FONT COLOR="#333333"><FONT FACE="Symbol"><FONT SIZE=2>&middot;</FONT></FONT></FONT><FONT COLOR="#333333">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</FONT><FONT COLOR="#333333"><FONT FACE="Verdana, sans-serif"><FONT SIZE=2><B>Publisher:</B></FONT></FONT></FONT><FONT COLOR="#333333">&nbsp;</FONT><FONT COLOR="#333333"><FONT FACE="Arial, sans-serif"><FONT SIZE=2>Pearson;
+10 edition (February 20, 2017)</FONT></FONT></FONT></P>
+<P><FONT COLOR="#333333"><FONT FACE="Symbol"><FONT SIZE=2>&middot;</FONT></FONT></FONT><FONT COLOR="#333333">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</FONT><FONT COLOR="#333333"><FONT FACE="Verdana, sans-serif"><FONT SIZE=2><B>Language:</B></FONT></FONT></FONT><FONT COLOR="#333333">&nbsp;</FONT><FONT COLOR="#333333"><FONT FACE="Arial, sans-serif"><FONT SIZE=2>English</FONT></FONT></FONT></P>
+<P><FONT COLOR="#333333"><FONT FACE="Symbol"><FONT SIZE=2>&middot;</FONT></FONT></FONT><FONT COLOR="#333333">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</FONT><FONT COLOR="#333333"><FONT FACE="Verdana, sans-serif"><FONT SIZE=2><B>ISBN-10:</B></FONT></FONT></FONT><FONT COLOR="#333333">&nbsp;</FONT><FONT COLOR="#333333"><FONT FACE="Arial, sans-serif"><FONT SIZE=2>0134448286</FONT></FONT></FONT></P>
+<P><FONT COLOR="#333333"><FONT FACE="Symbol"><FONT SIZE=2>&middot;</FONT></FONT></FONT><FONT COLOR="#333333">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</FONT><FONT COLOR="#333333"><FONT FACE="Verdana, sans-serif"><FONT SIZE=2><B>ISBN-13:</B></FONT></FONT></FONT><FONT COLOR="#333333">&nbsp;</FONT><FONT COLOR="#333333"><FONT FACE="Arial, sans-serif"><FONT SIZE=2>978-0134448282</FONT></FONT></FONT></P>
+<P><FONT COLOR="#333333"><FONT FACE="Symbol"><FONT SIZE=2>&middot;</FONT></FONT></FONT><FONT COLOR="#333333">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</FONT><FONT COLOR="#333333"><FONT FACE="Verdana, sans-serif"><FONT SIZE=2><B>Product
+Dimensions:&nbsp;</B></FONT></FONT></FONT><FONT COLOR="#333333"><FONT FACE="Arial, sans-serif"><FONT SIZE=2>7.3
+x 1.6 x 8.8 inches</FONT></FONT></FONT></P>
+<P STYLE="margin-bottom: 0in">&nbsp;</P>
+<P STYLE="margin-bottom: 0in"><U><B>Required Materials</B></U></P>
+<P STYLE="margin-bottom: 0in">Netbeans for all
+projects/assignments/tests/and labs in the class.</P>
+<P STYLE="margin-bottom: 0in">&nbsp;</P>
+<P STYLE="margin-bottom: 0in"><U><B>Course Description</B></U></P>
+<P STYLE="margin-bottom: 0in">Introduction to the discipline of
+computer science incorporating problem definitions, algorithm
+development, and structured programming logic for business,
+scientific and mathematical applications. The C++ language will be
+used for programming problems. 54 hours lecture and 54 hours
+laboratory.</P>
+<P STYLE="margin-bottom: 0in">&nbsp;</P>
+<P STYLE="margin-bottom: 0in"><U><B>Prerequisite - Advisory</B></U></P>
+<P STYLE="margin-bottom: 0in">CIS 1A &ndash; Introduction to Computer
+Information Systems. It is advised that before entering this course
+students be able to:</P>
+<P STYLE="margin-top: 0.07in; margin-bottom: 0in">1.&nbsp;&nbsp;&nbsp;
+Identify the fundamental computer concepts and terminology used for
+input, processing, output, and storage.</P>
+<P STYLE="margin-top: 0.07in; margin-bottom: 0in">2.&nbsp;&nbsp;&nbsp;
+Identify the key features of a variety of software such as operating
+systems, word processors, spreadsheets, databases, communications and
+graphics.</P>
+<P STYLE="margin-top: 0.07in; margin-bottom: 0in">3.&nbsp;&nbsp;&nbsp;
+Create electronic presentations with presentation graphics<FONT SIZE=2 STYLE="font-size: 11pt">.</FONT></P>
+<P STYLE="margin-top: 0.07in; margin-bottom: 0in">4.&nbsp;&nbsp;&nbsp;
+Demonstrate the principles of Internet research.</P>
+<P STYLE="margin-top: 0.07in; margin-bottom: 0in">5.&nbsp;&nbsp;&nbsp;
+Understand the principles of computer security, ethics and privacy</P>
+<P STYLE="margin-bottom: 0in">&nbsp;</P>
+<P STYLE="margin-bottom: 0in"><U><B>Course Objectives</B></U></P>
+<P STYLE="margin-bottom: 0in">Upon successful completion of the
+course, students should be able to:</P>
+<P STYLE="margin-top: 0.07in; margin-bottom: 0in">1.&nbsp;&nbsp;&nbsp;
+Describe the software development life-cycle</P>
+<P STYLE="margin-top: 0.07in; margin-bottom: 0in">2.&nbsp;&nbsp;&nbsp;
+Describe the principles of structured programming and be able to
+design, implement and test structured programs.</P>
+<P STYLE="margin-top: 0.07in; margin-bottom: 0in">3.&nbsp;&nbsp;&nbsp;
+Explain what an algorithm is and its importance in computer
+programming.</P>
+<P STYLE="margin-top: 0.07in; margin-bottom: 0in">4.&nbsp;&nbsp;&nbsp;
+Summarize the evolution of programming languages illustrating how
+this history has led to the paradigms available today.</P>
+<P STYLE="margin-top: 0.07in; margin-bottom: 0in">5.&nbsp;&nbsp;&nbsp;
+Use pseudo-code, flowcharts, and a programming language to implement,
+test, and debug algorithms for solving problems. Identify the
+information requirements, synthesize the algorithmic steps needed to
+transform the data input into the required output information, and
+organize the output format to facilitate user communication.</P>
+<P STYLE="margin-top: 0.07in; margin-bottom: 0in">6.&nbsp;&nbsp;&nbsp;
+Demonstrate different forms of binding, visibility, scoping, and
+lifetime management.</P>
+<P STYLE="margin-top: 0.07in; margin-bottom: 0in">7.&nbsp;&nbsp;&nbsp;
+Create computer programs using the principles of structured
+programming and demonstrate the use of an IDE with appropriate
+libraries. Design, implement, test, and debug programs that use
+fundamental programming constructs: basic computation, simple I/O,
+standard conditional and iterative structures, and functions.</P>
+<P STYLE="margin-top: 0.07in; margin-bottom: 0in">8.&nbsp;&nbsp;&nbsp;
+Apply the principles of logical and programming concepts to develop
+solutions for gaming, business, scientific and mathematical problems.</P>
+<P STYLE="margin-bottom: 0in"><U><B>Lab Hours</B></U></P>
+<P STYLE="margin-bottom: 0in">A total of <B>54</B> laboratory hours
+are <B>required to pass</B> this course. Labs are scheduled
+immediately after the class lecture. Each hour of Lab missed
+subtracts 2 per cent from your grade. Only 2 lab sessions can be made
+up during the semester. There are <B>no exceptions</B>. Lab hours are
+in <B>addition</B> to the scheduled class hours.</P>
+<P STYLE="margin-bottom: 0in">The online class will have lab
+assignments posted in Canvas consisting of the 54 hours we would
+normally do in class.</P>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<P STYLE="margin-bottom: 0in"><U><B>School and Class Rules</B></U></P>
+<P STYLE="margin-bottom: 0in"><I>Attendance and participation:</I> If
+you do not attend you cannot participate; if you do not participate,
+you cannot learn and therefore will not pass this class. You must
+show up to class prepared and ready to learn. Daily attendance will
+be taken and has same requirements as lab. For those in the online
+class, there will be zoom lectures, word of the day, discussion posts
+and assignments that will count as participation.</P>
+<P STYLE="margin-bottom: 0in"><I>Classroom decorum:</I> Be on time to
+class. If the door is locked and class has started, you missed class
+for that day. No food or drink is allowed in the classroom. You are
+expected to be cooperative and respectful during class. Using your
+cell phone, disruptive talking or behavior is considered rude and you
+will be asked to leave if you insist on being rude; you will not
+receive points for that day. If you have an emergency and must use
+your cell phone, please step out of the classroom and return when you
+are done. You <B>do not</B> have the right to disrupt the learning of
+others. 
+</P>
+<P STYLE="margin-bottom: 0in">Online decorum: Be on time posting to
+the discussion board. Assignments are opened and have a finite amount
+of time to post responses or solutions. You are expected to be
+cooperative and respectful during the discussion board or online
+office hours. You <B>do not</B> have the right to disrupt the
+learning of others. 
+</P>
+<P STYLE="margin-bottom: 0in">&nbsp;</P>
+<P STYLE="margin-bottom: 0in"><U><B>Statement on Academic Dishonesty:
+</B></U>
+</P>
+<P STYLE="margin-bottom: 0in">RCC defines plagiarism as, &ldquo;Presenting
+another person&rsquo;s language (spoken or written), ideas, artistic
+works or thoughts as if they were one&rsquo;s own.&rdquo; This
+includes using someone elses C++ code. Plagiarism is academically
+dishonest. Students must make appropriate acknowledgment of the
+original source where material written or compiled by another is
+used.&rdquo; Cheating or dishonest practices, such as turning in the
+writing of someone else and claiming it as your own, will result in
+your receiving a failing grade on the assignment and possibly for the
+course.</P>
+<P STYLE="margin-bottom: 0in">&nbsp;</P>
+<P STYLE="margin-bottom: 0in"><U><B>ADA Information</B></U></P>
+<P STYLE="margin-bottom: 0in">Please let me know if you need
+accommodations for a documented disability. The office of Services to
+Students with Disabilities will also be able to provide help and
+assistance.</P>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<P STYLE="margin-bottom: 0in; font-style: normal; font-weight: normal">
+<FONT COLOR="#201f1e"><FONT FACE="Times New Roman, serif"><FONT SIZE=3><U><B>DIVERSITY
+STATEMENT</B></U></FONT>&nbsp;</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in; border: none; padding: 0in; widows: 2; orphans: 2">
+<FONT COLOR="#201f1e">&nbsp;</FONT></P>
+<P STYLE="margin-bottom: 0in; border: none; padding: 0in; font-style: normal; font-weight: normal; widows: 2; orphans: 2">
+<FONT COLOR="#201f1e"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>Riverside
+City College School of Business embraces a notion of an intellectual
+community enriched by diversity with multiple dimensions, including
+race, ethnicity and national origin, gender, gender identity,
+sexuality, class, and religion. We are particularly committed to
+populations that have historically been excluded from equitable
+participation in the classroom, higher education institutions, and
+our communities. Individually, we are devoted to addressing our
+unconscious bias to pave the way for a more inclusive curriculum and
+learning environment.&nbsp;</FONT></FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<P STYLE="margin-bottom: 0in"><U><B>Course Activities and Class
+Format</B></U></P>
+<P STYLE="margin-bottom: 0in">Daily classroom instruction will
+consist of lectures, discussions, and demonstrations, as well as
+hands on work, both collaboratively and individually. Lecture will be
+delivered verbally, supported by PowerPoint presentations, chalk
+board drawings, and on occasion, paper handouts, among other methods.
+Periodically, students will be required to interact and work in
+groups or teams to reinforce learning. All lab, homework, and class
+projects will use Git/Github. Labs will use the class site Github
+repository where students are collaborators. Homework and projects
+will use student repositories with the instructor as the
+collaborator.</P>
+<P STYLE="margin-bottom: 0in">&nbsp;</P>
+<P STYLE="margin-bottom: 0in"><B>Lab: </B>Flowcharts/pseudo-code/programs
+per assigned topic. Students may collaborate on solutions and coding.
+Peer talks will also be required discussing the lecture content.</P>
+<P STYLE="margin-bottom: 0in">&nbsp;</P>
+<P STYLE="margin-bottom: 0in"><B>Homework: </B>10
+flowcharts/pseudo-code/programs per assigned topic. Students may
+collaborate on homework solutions, but the code must be your own.</P>
+<P STYLE="margin-bottom: 0in">&nbsp;</P>
+<P STYLE="margin-bottom: 0in"><B>Mid-Term:</B> No makeups. 5-6 or
+more computer programs which includes a menu. No collaboration
+allowed.</P>
+<P STYLE="margin-bottom: 0in">&nbsp;</P>
+<P STYLE="margin-bottom: 0in"><B>Project I:</B> A game of your choice
+to illustrate all the concepts covered up to the Midterm. Full
+documentation with a write-up including flowcharts/pseudo-code. Your
+unique solution. Minimum of 100 lines of code. Unused, or duplicative
+code, and unnecessary i/o will not count in the lines of code.
+Minimum lines of code and write-up will produce a C grade or less.
+This is one place to impress me with the knowledge and expertise you
+acquire in class.</P>
+<P STYLE="margin-bottom: 0in">&nbsp;</P>
+<P STYLE="margin-bottom: 0in"><B>Final Exam:</B> No makeups. 6 or
+more computer programs which includes a menu. No collaboration
+allowed.</P>
+<P STYLE="margin-bottom: 0in">&nbsp;</P>
+<P STYLE="margin-bottom: 0in"><B>Project II: </B>A game of your
+choice to illustrate all the concepts covered up to the Final. You
+may choose your first project as the basis for this project. Full
+documentation with a write-up including flowcharts/pseudo-code. Your
+unique solution. Minimum of 250 lines of code. Unused, or duplication
+code, and unnecessary i/o will not count in the lines of code.
+Minimum lines of code and write-up will produce a C grade or less.
+This is one place to impress me with the knowledge and expertise you
+acquire in class. <FONT SIZE=2 STYLE="font-size: 11pt">This project
+will be presented on Finals day.</FONT></P>
+<P STYLE="margin-bottom: 0in">&nbsp;</P>
+<P STYLE="margin-bottom: 0in"><B>Reading Assignments</B>: Reading
+assignments will be given and could be followed with impromptu
+quizzes which will be graded pass/fail and count as your attendance
+for lecture or lab.</P>
+<P STYLE="margin-bottom: 0in">&nbsp;</P>
+<P STYLE="margin-bottom: 0in"><U><B>Canvas</B></U></P>
+<P STYLE="margin-bottom: 0in">This course includes the use of Canvas.
+It is the student&rsquo;s responsibility to visit Canvas and stay
+current with respect to assignments and grades. Canvas will be used
+in the following ways:</P>
+<P STYLE="margin-bottom: 0in"><B>Course materials:</B> Course
+materials such as the syllabus, homework assignments, and review
+materials will be posted on Canvas. Reading assignments will be
+posted on Canvas as well. 
+</P>
+<P STYLE="margin-bottom: 0in"><B>Homework/Projects/Exams</B>: will be
+posted from Canvas.</P>
+<P STYLE="margin-bottom: 0in"><B>Announcements:</B> In addition to
+making announcements in class, all announcements will be posted on
+Canvas.</P>
+<P STYLE="margin-bottom: 0in"><B>Emails:</B> All emails sent to and
+by me will be sent outside of Canvas using your student or personal
+email.</P>
+<P STYLE="margin-bottom: 0in">&nbsp;</P>
+<P STYLE="margin-bottom: 0in">Your grade will be based on the
+following activities:</P>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<P STYLE="margin-bottom: 0in">&nbsp;</P>
+<CENTER>
+	<TABLE WIDTH=511 BORDER=1 CELLPADDING=2 CELLSPACING=3 FRAME=HSIDES RULES=NONE>
+		<COL WIDTH=209>
+		<COL WIDTH=55>
+		<COL WIDTH=223>
+		<TR VALIGN=BOTTOM>
+			<TD WIDTH=209>
+				<P ALIGN=CENTER STYLE="border: none; padding: 0in"><B>Activity </B>
+				</P>
+			</TD>
+			<TD WIDTH=55>
+				<P ALIGN=CENTER STYLE="border: none; padding: 0in">&nbsp;<B>%</B></P>
+			</TD>
+			<TD WIDTH=223>
+				<P ALIGN=CENTER STYLE="border: none; padding: 0in"><B>Point Value</B></P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=209>
+				<P STYLE="border: none; padding: 0in">Lab Assignments/Attendance</P>
+			</TD>
+			<TD WIDTH=55 SDVAL="-2" SDNUM="1033;">
+				<P ALIGN=CENTER STYLE="border: none; padding: 0in">-2</P>
+			</TD>
+			<TD WIDTH=223>
+				<P STYLE="border: none; padding: 0in">10 points subtracted for
+				each hour missed (2 sessions can be made up) Face to Face Only</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=209>
+				<P STYLE="border: none; padding: 0in">Class Lecture/Attendance</P>
+			</TD>
+			<TD WIDTH=55 SDVAL="-2" SDNUM="1033;">
+				<P ALIGN=CENTER STYLE="border: none; padding: 0in">-2</P>
+			</TD>
+			<TD WIDTH=223>
+				<P STYLE="border: none; padding: 0in">10 points subtracted for
+				each hour missed (2 sessions can be made up) Face to Face Only</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=209>
+				<P STYLE="border: none; padding: 0in">Homework</P>
+			</TD>
+			<TD WIDTH=55 SDVAL="20" SDNUM="1033;">
+				<P ALIGN=CENTER STYLE="border: none; padding: 0in">20</P>
+			</TD>
+			<TD WIDTH=223>
+				<P STYLE="border: none; padding: 0in">100 points total for all
+				programs</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=209>
+				<P STYLE="border: none; padding: 0in">Project I</P>
+			</TD>
+			<TD WIDTH=55 SDVAL="20" SDNUM="1033;">
+				<P ALIGN=CENTER STYLE="border: none; padding: 0in">20</P>
+			</TD>
+			<TD WIDTH=223>
+				<P STYLE="border: none; padding: 0in">100 points</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=209>
+				<P STYLE="border: none; padding: 0in">Midterm</P>
+			</TD>
+			<TD WIDTH=55>
+				<P ALIGN=CENTER STYLE="border: none; padding: 0in">20</P>
+			</TD>
+			<TD WIDTH=223>
+				<P STYLE="border: none; padding: 0in">100 points</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=209>
+				<P STYLE="border: none; padding: 0in">Project II 
+				</P>
+			</TD>
+			<TD WIDTH=55 SDVAL="20" SDNUM="1033;">
+				<P ALIGN=CENTER STYLE="border: none; padding: 0in">20</P>
+			</TD>
+			<TD WIDTH=223>
+				<P STYLE="border: none; padding: 0in">100 points</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=209>
+				<P STYLE="border: none; padding: 0in">Final</P>
+			</TD>
+			<TD WIDTH=55 SDVAL="20" SDNUM="1033;">
+				<P ALIGN=CENTER STYLE="border: none; padding: 0in">20</P>
+			</TD>
+			<TD WIDTH=223>
+				<P STYLE="border: none; padding: 0in">100 points</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=209>
+				<P ALIGN=CENTER STYLE="border: none; padding: 0in"><B>Total
+				Points </B>
+				</P>
+			</TD>
+			<TD WIDTH=55 SDVAL="500" SDNUM="1033;">
+				<P ALIGN=CENTER STYLE="border: none; padding: 0in"><B>500</B></P>
+			</TD>
+			<TD WIDTH=223>
+				<P ALIGN=CENTER STYLE="border: none; padding: 0in">&nbsp; 
+				</P>
+			</TD>
+		</TR>
+	</TABLE>
+</CENTER>
+<P STYLE="margin-bottom: 0in">&nbsp;</P>
+<P STYLE="margin-bottom: 0in"><U><B>Grading</B></U></P>
+<P STYLE="margin-bottom: 0in">Your grade will be calculated as
+follows:</P>
+<CENTER>
+	<TABLE BORDER=1 CELLPADDING=0 CELLSPACING=1>
+		<COL WIDTH=51>
+		<COL WIDTH=105>
+		<COL WIDTH=117>
+		<COL WIDTH=57>
+		<COL WIDTH=80>
+		<COL WIDTH=108>
+		<TR VALIGN=BOTTOM>
+			<TD WIDTH=61>
+				<P ALIGN=CENTER STYLE="border: none; padding: 0in"><FONT COLOR="#17375d"><B>Grade</B></FONT></P>
+			</TD>
+			<TD WIDTH=123>
+				<P ALIGN=CENTER STYLE="border: none; padding: 0in"><FONT COLOR="#17375d"><B>%</B></FONT></P>
+			</TD>
+			<TD WIDTH=137>
+				<P ALIGN=CENTER STYLE="border: none; padding: 0in"><FONT COLOR="#17375d"><B>No.
+				of points</B></FONT></P>
+			</TD>
+			<TD WIDTH=67>
+				<P ALIGN=CENTER STYLE="border: none; padding: 0in"><FONT COLOR="#17375d"><B>Grade</B></FONT></P>
+			</TD>
+			<TD WIDTH=94>
+				<P ALIGN=CENTER STYLE="border: none; padding: 0in"><FONT COLOR="#17375d"><B>%</B></FONT></P>
+			</TD>
+			<TD WIDTH=127>
+				<P ALIGN=CENTER STYLE="border: none; padding: 0in"><FONT COLOR="#17375d"><B>No.
+				of points</B></FONT></P>
+			</TD>
+		</TR>
+		<TR VALIGN=BOTTOM>
+			<TD WIDTH=61>
+				<P STYLE="border: none; padding: 0in">A</P>
+			</TD>
+			<TD WIDTH=123>
+				<P STYLE="border: none; padding: 0in">90 and above</P>
+			</TD>
+			<TD WIDTH=137>
+				<P STYLE="border: none; padding: 0in">450 and above</P>
+			</TD>
+			<TD WIDTH=67>
+				<P STYLE="border: none; padding: 0in">D</P>
+			</TD>
+			<TD WIDTH=94>
+				<P STYLE="border: none; padding: 0in">60 - 69.9</P>
+			</TD>
+			<TD WIDTH=127>
+				<P STYLE="border: none; padding: 0in">300-349</P>
+			</TD>
+		</TR>
+		<TR VALIGN=BOTTOM>
+			<TD WIDTH=61>
+				<P STYLE="border: none; padding: 0in">B</P>
+			</TD>
+			<TD WIDTH=123>
+				<P STYLE="border: none; padding: 0in">80 - 89.9</P>
+			</TD>
+			<TD WIDTH=137>
+				<P STYLE="border: none; padding: 0in">400-449</P>
+			</TD>
+			<TD WIDTH=67>
+				<P STYLE="border: none; padding: 0in">F</P>
+			</TD>
+			<TD WIDTH=94>
+				<P STYLE="border: none; padding: 0in">Below 60</P>
+			</TD>
+			<TD WIDTH=127>
+				<P STYLE="border: none; padding: 0in">299 and below</P>
+			</TD>
+		</TR>
+		<TR VALIGN=BOTTOM>
+			<TD WIDTH=61>
+				<P STYLE="border: none; padding: 0in">C</P>
+			</TD>
+			<TD WIDTH=123>
+				<P STYLE="border: none; padding: 0in">70 - 79.9</P>
+			</TD>
+			<TD WIDTH=137>
+				<P STYLE="border: none; padding: 0in">350-399</P>
+			</TD>
+			<TD WIDTH=67>
+				<P STYLE="text-indent: 0.46in; border: none; padding: 0in">&nbsp;
+								</P>
+			</TD>
+			<TD WIDTH=94>
+				<P STYLE="border: none; padding: 0in">&nbsp;</P>
+			</TD>
+			<TD WIDTH=127>
+				<P STYLE="border: none; padding: 0in">&nbsp;</P>
+			</TD>
+		</TR>
+	</TABLE>
+</CENTER>
+<P STYLE="margin-bottom: 0in"><U><B>Class Schedule(16week normal
+semester session)</B></U></P>
+<P STYLE="margin-bottom: 0in"><I>Weeks 1-8 -&gt; Cover IDE's,
+primitive data types, file i/o up to language constructs. Basically
+1) to 6) and 10) in the course outline.</I></P>
+<P STYLE="margin-left: 0.49in; margin-top: 0.07in; margin-bottom: 0in">
+Week 1 &rarr; Chapter 1, Install IDE</P>
+<P STYLE="margin-left: 0.49in; margin-top: 0.07in; margin-bottom: 0in">
+Week 2 &rarr; Chapter 2, Install Git, 10 Problems from Chapter 2
+assigned.</P>
+<P STYLE="margin-left: 0.49in; margin-top: 0.07in; margin-bottom: 0in">
+Week 3 &rarr; Chapter 3, 10 Problems from Chapter 3 assigned, Chapter
+2 problems due.</P>
+<P STYLE="margin-left: 0.49in; margin-top: 0.07in; margin-bottom: 0in">
+Week 4 &rarr; Chapter 3,4 10 Problems from Chapter 4 assigned,
+Chapter 3 problems due.</P>
+<P STYLE="margin-left: 0.49in; margin-top: 0.07in; margin-bottom: 0in">
+Week 5 &rarr; Chapter 4, Sign up for Gliffy Account</P>
+<P STYLE="margin-left: 0.49in; margin-top: 0.07in; margin-bottom: 0in">
+Week 6 &rarr; Chapter 5, 10 Problems from Chapter 5 assigned, Chapter
+4 problems due.</P>
+<P STYLE="margin-left: 0.49in; margin-top: 0.07in; margin-bottom: 0in">
+Week 7 &rarr; Chapter 5, Chapter 5 problems due.</P>
+<P STYLE="margin-left: 0.49in; margin-top: 0.07in; margin-bottom: 0in">
+Week 8 &rarr; Chapter 6, Midterm, Project 1 assigned.</P>
+<P STYLE="margin-bottom: 0in"><I>Weeks 9-16 -&gt; More advanced
+concepts 7) to 11) in the course outline.</I></P>
+<P STYLE="margin-left: 0.49in; margin-top: 0.07in; margin-bottom: 0in">
+Week 9 &rarr; Chapter 6, 10 problems from Chapter 6 assigned.</P>
+<P STYLE="margin-left: 0.49in; margin-top: 0.07in; margin-bottom: 0in">
+Week 10&rarr; Chapter 6, Project 1 due.</P>
+<P STYLE="margin-left: 0.49in; margin-top: 0.07in; margin-bottom: 0in">
+Week 11&rarr; Chapter 7, 10 problems from Chapter 7 assigned, Chapter
+6 problems due.</P>
+<P STYLE="margin-left: 0.49in; margin-top: 0.07in; margin-bottom: 0in">
+Week 12&rarr; Chapter 7,8 10 Problems from Chapter 8 assigned,
+Chapter 7 problems due.</P>
+<P STYLE="margin-left: 0.49in; margin-top: 0.07in; margin-bottom: 0in">
+Week 13&rarr; Chapter 8, Project 2 assigned, Chapter 8 problems due.</P>
+<P STYLE="margin-left: 0.49in; margin-top: 0.07in; margin-bottom: 0in">
+Week 14&rarr; Chapter 9, Chapter 9 and 11 concepts assigned in lab.</P>
+<P STYLE="margin-left: 0.49in; margin-top: 0.07in; margin-bottom: 0in">
+Week 15&rarr; Chapter 11, Project 2 due.</P>
+<P STYLE="margin-left: 0.49in; margin-top: 0.07in; margin-bottom: 0in">
+Week 16&rarr; Chapter 13 Final and Project 2 class presentation.</P>
+<P STYLE="margin-bottom: 0in">&nbsp;</P>
+<P STYLE="margin-bottom: 0in"><U><B>Intersession(6week)</B></U></P>
+<P STYLE="margin-bottom: 0in">Weeks 1-3 -&gt; Cover IDE's, primitive
+data types, file i/o up to language constructs. Basically 1) to 6)
+and 10) in the course outline.</P>
+<P STYLE="margin-bottom: 0in">Week 4 -&gt; Midterm and Project I.</P>
+<P STYLE="margin-bottom: 0in">Weeks 4-5 -&gt; More advanced concepts
+7) to 11) in the course outline.</P>
+<P>Week 6 -&gt; Final and Project II.</P>
+<P><U><B>Specific Tasks by Week for 6 week schedule.</B></U></P>
+<P STYLE="margin-bottom: 0in">Week 1 &rarr; Chapters 1 and 2 Gaddis
+10 Programming Projects/Chapter</P>
+<P STYLE="margin-bottom: 0in">Week 2 &rarr; Chapters 3 and 4 Gaddis
+10 Programming Projects/Chapter</P>
+<P STYLE="margin-bottom: 0in">Week 3 &rarr; Chapters 5 and 6 Gaddis
+10 Programming Projects/Chapter</P>
+<P STYLE="margin-bottom: 0in">Week 4 &rarr; Midterm and Chapter 7
+Gaddis 10 Programming Projects/Chapter</P>
+<P STYLE="margin-bottom: 0in">Week 5 &rarr; Project 1 and Chapter 8
+Gaddis 10 Programming Projects/Chapter</P>
+<P STYLE="margin-bottom: 0in">Week 6 &rarr; Final and Project 2
+Review of Chapters 9,11,13 from Gaddis</P>
+<P>Lab Assignments will be assigned to support the Homework
+Assignments as needed.</P>
+<DIV TYPE=FOOTER>
+	<P ALIGN=CENTER STYLE="margin-top: 0.2in">&nbsp;</P>
+	<P ALIGN=CENTER STYLE="margin-bottom: 0in"><SDFIELD TYPE=PAGE SUBTYPE=RANDOM FORMAT=PAGE>7</SDFIELD></P>
+	<P STYLE="margin-bottom: 0in">&nbsp;</P>
+</DIV>
+</BODY>
+</HTML>
